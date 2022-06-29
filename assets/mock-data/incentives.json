@@ -1,0 +1,20 @@
+{
+    "incentives": [
+        {
+            "minValue": 1,
+            "maxValue": 49.99,
+            "deliveryCost": 4.95
+        },
+        {
+            "minValue": 50.00,
+            "maxValue": 89.99,
+            "deliveryCost": 2.95
+        }
+        ,
+        {
+            "minValue": 90.00,
+            "maxValue": 0,
+            "deliveryCost": 0
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "id": "R01",
+            "name": "Red Plate",
+            "price": 32.95,
+            "imgPath": "./assets/images/red-plate.jpg"
+        },
+        {
+            "id": "G01",
+            "name": "Green Plate",
+            "price": 24.95,
+            "imgPath": "./assets/images/green-plate.jpg"
+        },
+        {
+            "id": "B01",
+            "name": "Blue Plate",
+            "price": 7.95,
+            "imgPath": "./assets/images/blue-plate.jpg"
+        }
+    ] 
+}
