@@ -6,6 +6,11 @@ const cartTotalData = {
     incentiveApplied: false
 };
 
+/**
+ * 
+ * @param {fetching product by productId }  
+ * @returns 
+ */
 const getProductById = (productId) => {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
@@ -20,6 +25,10 @@ const getProductById = (productId) => {
     });
 };
 
+/**
+ * 
+ * @param {Adding Product to Cart by } proudctId 
+ */
 const addToCart = (proudctId) => {
     getProductById(proudctId)
         .then(selectedProduct =>{
@@ -44,6 +53,9 @@ const addToCart = (proudctId) => {
         });
 };
 
+/**
+ * Updating Cart Items by iterating cartItems arrayCollection
+ */
 const updateCartItems = () => {
     const cartItemsListElement = document.getElementById('cart-list');
     let cartItemMarkup = '';
@@ -64,6 +76,9 @@ const updateCartItems = () => {
     cartItemsListElement.innerHTML = cartItemMarkup;
 }
 
+/**
+ * Updating Total value based on incentives and derived delivery cost
+ */
 const updateToltal = () => {
     cartTotalData.orderValue = 0;
     for (let index = 0; index < cartItems.length; index++) {
@@ -89,6 +104,9 @@ const updateToltal = () => {
     });
 };
 
+/**
+ * fetching current incentives through json
+ */
 const getIncentives = new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', './assets/mock-data/incentives.json', true);
@@ -100,6 +118,10 @@ const getIncentives = new Promise((resolve, reject) => {
     xhr.send();
 });
 
+/**
+ * 
+ * @param {removing item by} itemId 
+ */
 const removeItem = (itemId) => {
     const itemIndex = cartItems.findIndex(prod => prod.id === itemId);
     if (itemIndex !== -1) {
@@ -113,6 +135,9 @@ const removeItem = (itemId) => {
     }
 };
 
+/**
+ * Emptying Cart when there are no items and updating total
+ */
 const emptyCart = () => {
     const cartItemsListElement = document.getElementById('cart-list');
     cartItemsListElement.innerHTML = '';
