@@ -1,6 +1,7 @@
 # plates-co-poc
 
 Products are fetched through mock data of json format.
+<pre>
 {
     "products": [
         {
@@ -23,9 +24,11 @@ Products are fetched through mock data of json format.
         }
     ] 
 }
+</pre>
 
 # Incentives
 Incentives are fetched from mock data of incentives.json. Note: Incentives must start from lower to higher combinations.
+<pre>
 {
     "incentives": [
         {
@@ -46,11 +49,14 @@ Incentives are fetched from mock data of incentives.json. Note: Incentives must 
         }
     ]
 }
+</pre>
 # Initiation with populating Products
 Application invokes loadProducts method on window load.
+<pre>
 window.onload = () => {
     loadProducts();
 };
+</pre>
 
 Products and Cart have their own JS files separately.
 
